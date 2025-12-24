@@ -2,12 +2,12 @@ import datetime
 import os
 
 import pytest
-from pytest_jsonreport.plugin import JSONReport
+# from pytest_jsonreport.plugin import JSONReport
 
 
 
 if __name__ == '__main__':
-    plugin = JSONReport()
+    # plugin = JSONReport()
     now = datetime.datetime.now()
     time_str = now.strftime("%Y-%m-%d-%H%M%S")
     current_directory = os.path.dirname(os.path.abspath(__file__))[:30]
