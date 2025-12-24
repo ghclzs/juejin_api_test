@@ -23,3 +23,10 @@ class ClientUserApi:
         url = self.url + "/edu-pm/v1/applet/position/get-detail?id=2003302443144683521&location=113.423305,23.100007"
         result = RestClient().do_request(method="GET", url=url, headers=headers, json=None)
         return result
+
+    def get_bottom_menu_configuration(self, token):
+        headers = copy.deepcopy(config.C_uniappBaseHeader)
+        headers['Blade-Auth'] = token
+        url = self.url + "/blade-system/dict-biz/dictionary?code=EDU_BOTTOM_MENU_CONFIGURATION"
+        result = RestClient().do_request(method="GET", url=url, headers=headers, json=None)
+        return result

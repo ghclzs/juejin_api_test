@@ -18,3 +18,9 @@ class Test_c_user(object):
         result = ClientUserApi().get_position_detail(None)
         assert result["code"] == 200
 
+    @allure.story("获取首页底部配置")
+    @allure.title("获取首页底部配置")
+    def test_get_bottom_menu_configuration(self):
+        result = ClientUserApi().get_bottom_menu_configuration(None)
+        assert result["code"] == 200
+
